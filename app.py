@@ -6,8 +6,8 @@ import os, re, cv2, numpy as np
 from datetime import datetime
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
-
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+import shutil
+pytesseract.pytesseract.tesseract_cmd = shutil.which("tesseract")
 
 # === KONFIGURASI APLIKASI ===
 st.set_page_config(page_title="Smart OCR KTP / SIM / NPWP", page_icon="🪪", layout="wide")
